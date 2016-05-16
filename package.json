@@ -1,0 +1,19 @@
+{
+  "name": "reactflo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stimul8d/ReactFlo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stimul8d/ReactFlo/issues"
+  },
+  "homepage": "https://github.com/Stimul8d/ReactFlo#readme"
+}
