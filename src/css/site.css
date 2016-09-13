@@ -1,0 +1,15 @@
+.title {
+    display: inline;
+}
+
+.inlineLabel{
+  display:inline;
+}
+
+.rightMarginPad{
+  margin-right:10px;
+}
+
+.topMarginPad{
+  margin:15px 0 0 0;
+}

@@ -10,7 +10,7 @@
     "build": "npm run build:clean && npm run build:compile && npm run build:bundle && npm run build:copy",
     "serve": "watch-http-server './dist/' -o",
     "buildAndServe": "npm run build && npm run serve",
-    "watch": "onchange 'src/*.html' -- npm run build:copy",
+    "watch": "onchange 'src/*.*' -- npm run build",
     "start": "parallelshell 'npm run watch' 'npm run buildAndServe'"
   },
   "repository": {
