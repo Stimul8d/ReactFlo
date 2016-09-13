@@ -1,9 +1,8 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
+import Header from './header.js'
 
-class App extends React.Component {
-    render() {
-        return <h1 > hey < /h1>
-    }
-}
-
-export default App;
+ReactDOM.render(
+    <Header phrase="ES6"/>,
+    document.querySelector('.root')
+);
