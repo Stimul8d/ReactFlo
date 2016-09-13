@@ -1,15 +1,31 @@
+hr {
+    margin: 5px;
+    padding4px;
+}
+
 .title {
     display: inline;
 }
 
-.inlineLabel{
-  display:inline;
+.inlineLabel {
+    display: inline;
+    margin-right: 5px;
 }
 
-.rightMarginPad{
-  margin-right:10px;
+.rightMarginPad {
+    margin-right: 10px;
 }
 
-.topMarginPad{
-  margin:15px 0 0 0;
+.topMarginPad {
+    margin: 15px 0 0 0;
+}
+
+.columnStyle {
+    border-right: solid 1px #eee;
+}
+
+.container {
+    max-width: 100%;
+    min-width: 1200px;
+    width: 95%;
 }
