@@ -3,6 +3,10 @@ hr {
     padding4px;
 }
 
+ul {
+    list-style: none;
+}
+
 .title {
     display: inline;
 }
@@ -22,6 +26,10 @@ hr {
 
 .columnStyle {
     border-right: solid 1px #eee;
+}
+
+.columnStyle:last-of-type {
+    border: none;
 }
 
 .container {

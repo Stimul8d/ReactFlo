@@ -1,16 +1,25 @@
 import React from 'react'
 import Column from './column.js'
+import Header from './header.js'
 
 class Board extends React.Component {
-    render() {
-        return <div className="row">
-            <Column title="Backlog"/>
-            <Column title="Development"/>
-            <Column title="Code Review"/>
-            <Column title="Testing"/>
-            <Column title="Deployment"/>
-            <Column title="Complete"/>
-        </div>
+    constructor(props) {
+        super(props);
+        this.items = [{ id: 1, cycle: 1 }, { id: 2, cycle: 2 }];
+    }
+
+    render() { 
+        return <div className="container">
+            <Header/>
+            <div className="row">
+                <Column title="Backlog" items={this.items}/>
+                <Column title="Development" items={this.items}/>
+                <Column title="Code Review" items={this.items}/>
+                <Column title="Testing" items={this.items}/>
+                <Column title="Deployment" items={this.items}/>
+                <Column title="Complete"/>
+            </div>
+        </div>;
     }
 }
 

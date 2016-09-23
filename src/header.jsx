@@ -5,7 +5,7 @@ class Header extends React.Component {
     state = {
         demand: 20,
         cycles: 30
-    };
+    }
 
     updateDemand = (event) => {
         this.setState({demand: event.target.value});
@@ -27,6 +27,7 @@ class Header extends React.Component {
                 <button>Step</button>
                 <button>Run</button>
             </span>
+            <hr/>
         </span>
     }
 }
