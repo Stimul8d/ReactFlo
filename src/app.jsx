@@ -1,6 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import Board from './board.js'
+import Store from './store.js'
 
-ReactDOM.render(
-    <Board/>, document.querySelector('.root'));
+var store = new Store().getStore();
+
+store.subscribe(() => {
+    render(<Board store={store}/>, document.querySelector('.root'))
+});
+
+render(<Board store={store}/>, document.querySelector('.root'))

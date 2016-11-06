@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "build:clean": "rimraf dist",
-    "build:compile": "babel src -d dist/scripts/temp",
-    "build:bundle": "browserify dist/scripts/temp/app.js -o dist/scripts/bundle.js && rimraf dist/scripts/temp",
+    "build:compile": "babel src -d dist/scripts/temp --source-maps inline",
+    "build:bundle": "browserify dist/scripts/temp/app.js -o dist/scripts/bundle.js && rimraf dist/scripts/temp -d -t",
     "build:copy": "copyfiles -f src/css/*.css dist/css & copyfiles -f src/*.html dist",
     "build": "npm run build:clean && npm run build:compile && npm run build:bundle && npm run build:copy",
     "serve": "watch-http-server './dist/' -o",
@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "redux": "^3.6.0"
   }
 }

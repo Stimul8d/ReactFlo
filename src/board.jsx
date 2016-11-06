@@ -3,21 +3,26 @@ import Column from './column.js'
 import Header from './header.js'
 
 class Board extends React.Component {
+
     constructor(props) {
         super(props);
-        this.items = [{ id: 1, cycle: 1 }, { id: 2, cycle: 2 }];
+        this.store = props.store
+        
+        this.store.subscribe(()=>{
+            this.items = this.store.getState().items;
+        });
     }
 
-    render() { 
+    render() {
         return <div className="container">
-            <Header/>
+            <Header store={this.store} title="WIP-Sim" />
             <div className="row">
-                <Column title="Backlog" items={this.items}/>
-                <Column title="Development" items={this.items}/>
-                <Column title="Code Review" items={this.items}/>
-                <Column title="Testing" items={this.items}/>
-                <Column title="Deployment" items={this.items}/>
-                <Column title="Complete"/>
+                <Column title="Backlog" items={this.items} store={this.store} />
+                <Column title="Development" items={this.items} store={this.store} />
+                <Column title="Code Review" items={this.items} store={this.store} />
+                <Column title="Testing" items={this.items} store={this.store} />
+                <Column title="Deployment" items={this.items} store={this.store} />
+                <Column title="Complete" store={this.store} />
             </div>
         </div>;
     }

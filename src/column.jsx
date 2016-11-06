@@ -2,10 +2,15 @@ import React from 'react'
 import Kanban from './kanban.js'
 
 class Column extends React.Component {
+    
+    constructor(props){
+        super(props);
+        this.store = props.store;
+    }
 
     getItems() {
-        if (!this.props.items) return
-        return this.props.items.map((x) => <Kanban key={x.id} id={x.id} cycle={x.cycle}/>)
+        let data = this.store.getState();
+        return data.items.map((x) => <Kanban key={x.id} id={x.id} cycle={x.cycle}/>)
     }
 
     render() {
